@@ -1,0 +1,65 @@
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{ 
+       
+        "name": "spants",
+        "cost": 20,
+        "image": "https://i.ibb.co/SfXj1F9/spants.png",
+        "favourite": true,
+        "categori": "spants",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      
+}
+###
+POST http://localhost:5000/products/update
+Content-Type: application/json
+
+{ 
+     "id":"3",
+            "title":"computer",
+            "price":100000,
+           "image" : "a",
+            "pet":"cat"  
+}
+### 
+GET http://localhost:5000/admin/products?_page=0&_limit=2
+Authorization: Beaer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFiYyIsImlhdCI6MTYyNzMxNTc2NywiZXhwIjoxNjI3MzE1Nzk3fQ.niqOF26ZX7NVKSAIGrD49WRUr3kPJD7tkACMgO2NuQY
+###
+POST http://127.0.0.1:5005/login
+Content-Type: application/json
+
+{   
+         "username":"admin",
+            "password": "admin"
+}
+###
+POST http://localhost:5000/create
+Content-Type: application/json
+
+{   
+            "username":"admin",
+            "password": "admin",
+            "RSAPublicKey": "123"
+
+}
+###
+POST http://localhost:5000/products/comment
+Content-Type: application/json
+
+{   
+            "_id":"61049f7bc9b45f1b342625b9",
+            "userId":"611e8c880a224207dcea4b7d",
+            "username": "Nhat",
+            "content": "ajshaaaaaaaaaaaaaaaaaadsd"
+}
+###
+POST http://localhost:5000/order
+Content-Type: application/json
+
+{   
+            "username":"nhat",
+            "password": "nhat"
+}
+###
+GET http://localhost:5005/name?firstname=van&lastname=nghia
