@@ -12,8 +12,8 @@ import uploadRouter from "./routers/uploadImages.js";
 import { PythonShell } from "python-shell";
 import uploadKey from "./routers/uploadKey.js"
 import user from "./routers/user.js"
-const URI =
-  "mongodb+srv://hcmus:hcmus123@cluster0.vps3a.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const URI = process.env.URI_MONGODB;
+ 
 
 const app = express();
 
