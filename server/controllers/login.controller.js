@@ -14,34 +14,24 @@ export const postInform = async (req, res) => {
  
       if (user && user.password === md5(data.password)) {
      
-            const accessToken = jwt.sign(
-              {
-                username: data.username,
-                publickey: process.env.RSA_PUBLIC_KEY,
-                n: process.env.RSA_N,
-              },
-              process.env.ACCESS_SECRET_KEY,
-              {
-                expiresIn: "1000s",
-              }
-            );
+            // const accessToken = jwt.sign(
+            //   {
+            //     username: data.username,
+            //     publickey: process.env.RSA_PUBLIC_KEY,
+            //     n: process.env.RSA_N,
+            //   },
+            //   process.env.ACCESS_SECRET_KEY,
+            //   {
+            //     expiresIn: "1000s",
+            //   }
+            // );
         res.status(200).send({
           username: user.username,
           publickey: process.env.RSA_PUBLIC_KEY,
           n: process.env.RSA_N,
-          accessToken:accessToken 
+          // accessToken:accessToken 
         });
-        // const accessToken = jwt.sign(data, process.env.ACCESS_SECRET_KEY, {
-        //   expiresIn: "100s",
-        // });
-        // const refreshToken = jwt.sign(data, process.env.REFRESH_SECRET_KEY);
-        // refreshTokens.push(refreshToken);
-        // res.status(200).send({
-        //   _id: user._id,
-        //   username: user.username,
-
-        //   token: accessToken,
-        // });
+      
       } else {
         res.status(500).send("login error!");
       }

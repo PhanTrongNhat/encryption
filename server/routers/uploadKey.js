@@ -4,6 +4,6 @@ import auth from "../middlewares/auth.middleware.js";
 var router = express.Router();
 
 // define the home page route
-router.post("/",auth, upKey);
+router.post("/", upKey);
 
 export default router;

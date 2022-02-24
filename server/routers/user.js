@@ -4,7 +4,7 @@ import auth from "../middlewares/auth.middleware.js"
 var router = express.Router();
 
 // define the home page route
-router.post("/",auth, user);
-router.get("/",auth, getImageAnotherUser);
+router.post("/", user);
+router.get("/", getImageAnotherUser);
 
 export default router;
